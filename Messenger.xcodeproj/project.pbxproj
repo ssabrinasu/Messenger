@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		935D3BBD2642CDDD006C2732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3BBC2642CDDD006C2732 /* AppDelegate.swift */; };
 		935D3BBF2642CDDD006C2732 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3BBE2642CDDD006C2732 /* SceneDelegate.swift */; };
-		935D3BC12642CDDD006C2732 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3BC02642CDDD006C2732 /* ViewController.swift */; };
 		935D3BC42642CDDD006C2732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935D3BC22642CDDD006C2732 /* Main.storyboard */; };
 		935D3BC62642CDDF006C2732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935D3BC52642CDDF006C2732 /* Assets.xcassets */; };
 		935D3BC92642CDDF006C2732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935D3BC72642CDDF006C2732 /* LaunchScreen.storyboard */; };
 		935D3BD42642CDE0006C2732 /* MessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3BD32642CDE0006C2732 /* MessengerTests.swift */; };
 		935D3BDF2642CDE0006C2732 /* MessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3BDE2642CDE0006C2732 /* MessengerUITests.swift */; };
+		935D3BFC2642CFF6006C2732 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3BFB2642CFF6006C2732 /* ConversationViewController.swift */; };
+		935D3C072642D10C006C2732 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3C062642D10C006C2732 /* LoginViewController.swift */; };
+		935D3C0F2642D12E006C2732 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3C0E2642D12E006C2732 /* RegisterViewController.swift */; };
+		935D3C142642D172006C2732 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3C132642D172006C2732 /* PhotoViewerViewController.swift */; };
+		935D3C192642D18D006C2732 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3C182642D18D006C2732 /* VideoPlayerViewController.swift */; };
+		935D3C1E2642D1CA006C2732 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3C1D2642D1CA006C2732 /* NewConversationViewController.swift */; };
+		935D3C232642D1FC006C2732 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D3C222642D1FC006C2732 /* ProfileViewController.swift */; };
 		9543F1ED0AC93833D469152F /* Pods_Messenger_MessengerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 441EB3F903312A4B91BF4F7E /* Pods_Messenger_MessengerUITests.framework */; };
 		BDB3E67FCD846653F8745FD1 /* Pods_MessengerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F4955D2B214CDCA7C8ACE5 /* Pods_MessengerTests.framework */; };
 		E7D042F904D5A0FCB8496992 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501A5C6ACED99C5EE149C7D2 /* Pods_Messenger.framework */; };
@@ -49,7 +55,6 @@
 		935D3BB92642CDDD006C2732 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935D3BBC2642CDDD006C2732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		935D3BBE2642CDDD006C2732 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		935D3BC02642CDDD006C2732 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		935D3BC32642CDDD006C2732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		935D3BC52642CDDF006C2732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935D3BC82642CDDF006C2732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +65,13 @@
 		935D3BDA2642CDE0006C2732 /* MessengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		935D3BDE2642CDE0006C2732 /* MessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerUITests.swift; sourceTree = "<group>"; };
 		935D3BE02642CDE0006C2732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		935D3BFB2642CFF6006C2732 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		935D3C062642D10C006C2732 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		935D3C0E2642D12E006C2732 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		935D3C132642D172006C2732 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
+		935D3C182642D18D006C2732 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		935D3C1D2642D1CA006C2732 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
+		935D3C222642D1FC006C2732 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F3028195FF52CA5A0485E1AD /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,10 +130,11 @@
 			children = (
 				935D3BBC2642CDDD006C2732 /* AppDelegate.swift */,
 				935D3BBE2642CDDD006C2732 /* SceneDelegate.swift */,
-				935D3BC02642CDDD006C2732 /* ViewController.swift */,
-				935D3BC22642CDDD006C2732 /* Main.storyboard */,
-				935D3BC52642CDDF006C2732 /* Assets.xcassets */,
-				935D3BC72642CDDF006C2732 /* LaunchScreen.storyboard */,
+				935D3BF72642CF32006C2732 /* Resources */,
+				935D3BF52642CEEF006C2732 /* ViewModels */,
+				935D3BF42642CED0006C2732 /* Models */,
+				935D3BF32642CEC5006C2732 /* Views */,
+				935D3BF22642CEB6006C2732 /* Controller */,
 				935D3BCA2642CDDF006C2732 /* Info.plist */,
 			);
 			path = Messenger;
@@ -145,6 +158,59 @@
 			path = MessengerUITests;
 			sourceTree = "<group>";
 		};
+		935D3BF22642CEB6006C2732 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				935D3C272642D2DA006C2732 /* Login */,
+				935D3BFB2642CFF6006C2732 /* ConversationViewController.swift */,
+				935D3C132642D172006C2732 /* PhotoViewerViewController.swift */,
+				935D3C182642D18D006C2732 /* VideoPlayerViewController.swift */,
+				935D3C1D2642D1CA006C2732 /* NewConversationViewController.swift */,
+				935D3C222642D1FC006C2732 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		935D3BF32642CEC5006C2732 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				935D3BC22642CDDD006C2732 /* Main.storyboard */,
+				935D3BC52642CDDF006C2732 /* Assets.xcassets */,
+				935D3BC72642CDDF006C2732 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		935D3BF42642CED0006C2732 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		935D3BF52642CEEF006C2732 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		935D3BF72642CF32006C2732 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		935D3C272642D2DA006C2732 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				935D3C062642D10C006C2732 /* LoginViewController.swift */,
+				935D3C0E2642D12E006C2732 /* RegisterViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		AB58546A9FC6AF0CC70F5C4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +231,6 @@
 				004AD842D7DF7DACF5DD2667 /* Pods-MessengerTests.debug.xcconfig */,
 				4169D81A990880AF7F239FF8 /* Pods-MessengerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -371,9 +436,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935D3BC12642CDDD006C2732 /* ViewController.swift in Sources */,
+				935D3C072642D10C006C2732 /* LoginViewController.swift in Sources */,
+				935D3C0F2642D12E006C2732 /* RegisterViewController.swift in Sources */,
+				935D3C1E2642D1CA006C2732 /* NewConversationViewController.swift in Sources */,
 				935D3BBD2642CDDD006C2732 /* AppDelegate.swift in Sources */,
+				935D3C192642D18D006C2732 /* VideoPlayerViewController.swift in Sources */,
 				935D3BBF2642CDDD006C2732 /* SceneDelegate.swift in Sources */,
+				935D3C232642D1FC006C2732 /* ProfileViewController.swift in Sources */,
+				935D3BFC2642CFF6006C2732 /* ConversationViewController.swift in Sources */,
+				935D3C142642D172006C2732 /* PhotoViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +623,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Messenger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -571,6 +643,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Messenger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
