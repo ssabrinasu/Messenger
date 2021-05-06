@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     private let scrollView: UIScrollView = {
@@ -15,9 +16,12 @@ class RegisterViewController: UIViewController {
     }()
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person.crop.circle.fill.badge.plus")
+        imageView.image = UIImage(systemName: "person.crop.circle.fill")
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
         return imageView
     }()
     private let firstNameField: UITextField = {
@@ -89,10 +93,6 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Register"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log In",
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(didTapRegister))
         loginButton.addTarget(self,
                               action: #selector(registerButtonTapped),
                               for: .touchUpInside)
@@ -124,6 +124,7 @@ class RegisterViewController: UIViewController {
                                  y: 20,
                                  width: size,
                                  height: size)
+        imageView.layer.cornerRadius = imageView.width/2.0
         firstNameField.frame = CGRect(x: 30,
                                       y: imageView.bottom+10,
                                       width: scrollView.width-60,
@@ -173,11 +174,6 @@ class RegisterViewController: UIViewController {
                                       handler: nil))
         present(alert, animated: true)
     }
-    @objc private func didTapRegister() {
-        let vcRegister = RegisterViewController()
-        vcRegister.title = "Create Account"
-        navigationController?.pushViewController(vcRegister, animated: true)
-    }
 }
 extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -190,7 +186,7 @@ extension RegisterViewController: UITextFieldDelegate {
     }
 }
 
-extension RegisterViewController: UIImagePickerControllerDelegate {
+extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func presentPhotoActionSheet() {
         let actionShet = UIAlertController(title: "Profile Picture",
                                            message: "How would you like to select a picture",
@@ -200,18 +196,36 @@ extension RegisterViewController: UIImagePickerControllerDelegate {
                                            handler: nil))
         actionShet.addAction(UIAlertAction(title: "Take Photo",
                                            style: .default,
-                                           handler: { _ in
-                                            
+                                           handler: { [weak self] _ in
+                                            self?.presentCamera()
                                            }))
         actionShet.addAction(UIAlertAction(title: "Chose Photo",
                                            style: .default,
-                                           handler: { _ in
-                                            
+                                           handler: { [weak self] _ in
+                                            self?.presentPhotPicker()
                                            }))
+        present(actionShet, animated: true)
+    }
+    func presentCamera() {
+        let vcPicker = UIImagePickerController()
+        vcPicker.sourceType = .camera
+        vcPicker.delegate = self
+        vcPicker.allowsEditing = true
+        present(vcPicker, animated: true)
+    }
+    func presentPhotPicker() {
+        let vcPicker = UIImagePickerController()
+        vcPicker.sourceType = .photoLibrary
+        vcPicker.delegate = self
+        vcPicker.allowsEditing = true
+        present(vcPicker, animated: true)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
+        picker.dismiss(animated: true, completion: nil)
+        guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {return}
+        self.imageView.image = selectedImage
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }
