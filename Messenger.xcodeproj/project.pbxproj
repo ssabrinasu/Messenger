@@ -166,8 +166,8 @@
 		935D3BF22642CEB6006C2732 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				935D3C272642D2DA006C2732 /* Login */,
 				935D3BFB2642CFF6006C2732 /* ConversationViewController.swift */,
+				935D3C272642D2DA006C2732 /* Login */,
 				935D3C132642D172006C2732 /* PhotoViewerViewController.swift */,
 				935D3C182642D18D006C2732 /* VideoPlayerViewController.swift */,
 				935D3C1D2642D1CA006C2732 /* NewConversationViewController.swift */,
