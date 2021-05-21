@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ConversationViewController: UIViewController {
 
@@ -15,9 +16,10 @@ class ConversationViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // Se o userDefault de login estiver vazio entao é chamada a tela de login
-        let isLonggedIn = UserDefaults.standard.bool(forKey: "longged_in")
-        if !isLonggedIn {
+        validateAuth()
+    }
+    private func validateAuth(){
+        if FirebaseAuth.Auth.auth().currentUser == nil {
             let vcLogin = LoginViewController()
             let nav = UINavigationController(rootViewController: vcLogin)
             nav.modalPresentationStyle = .fullScreen
