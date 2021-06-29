@@ -9,7 +9,6 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-
 class RegisterViewController: UIViewController {
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -80,7 +79,7 @@ class RegisterViewController: UIViewController {
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
         field.leftViewMode = .always
         field.backgroundColor = .white
-        field.isSecureTextEntry = true
+        // field.isSecureTextEntry = true
         return field
     }()
     private let loginButton: UIButton = {
@@ -149,12 +148,12 @@ class RegisterViewController: UIViewController {
                                      height: 52)
     }
     @objc private func registerButtonTapped() {
-        firstNameField.resignFirstResponder()
-        lastNameField.resignFirstResponder()
+//        firstNameField.resignFirstResponder()
+//        lastNameField.resignFirstResponder()
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
-        guard let firstName = emailField.text,
-              let lastName = passwordField.text,
+        guard let firstName = firstNameField.text,
+              let lastName = lastNameField.text,
               let email = emailField.text,
               let password = passwordField.text,
               !firstName.isEmpty,
@@ -172,10 +171,13 @@ class RegisterViewController: UIViewController {
             }
             guard !exists else {
                 // user already exists
-                strongSelf.alertUserLoginError(message: "Looks like a user account for that email address aredy exists.")
+                strongSelf.alertUserLoginError(
+                    message: "Looks like a user account for that email address aredy exists.")
                 return
             }
-            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
+            FirebaseAuth.Auth.auth().createUser(withEmail: email,
+                                                password: password,
+                                                completion: { authResult, error in
                 guard let strongSelf = self else {
                     self?.alertUserLoginError(message: "")
                     return
@@ -191,7 +193,7 @@ class RegisterViewController: UIViewController {
             })
         })
     }
-    func alertUserLoginError(message: String = "Please enter all informations") {
+    func alertUserLoginError(message: String = "Please enter all informations to create new account.") {
         let alert = UIAlertController(title: "Woops",
                                       message: message,
                                       preferredStyle: .alert)
@@ -246,7 +248,8 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         vcPicker.allowsEditing = true
         present(vcPicker, animated: true)
     }
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {return}
         self.imageView.image = selectedImage
