@@ -148,8 +148,8 @@ class RegisterViewController: UIViewController {
                                      height: 52)
     }
     @objc private func registerButtonTapped() {
-//        firstNameField.resignFirstResponder()
-//        lastNameField.resignFirstResponder()
+        firstNameField.resignFirstResponder()
+        lastNameField.resignFirstResponder()
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
         guard let firstName = firstNameField.text,
