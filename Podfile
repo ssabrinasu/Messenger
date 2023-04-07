@@ -14,6 +14,9 @@ target 'Messenger' do
   # -Facebook log in
   pod 'FBSDKLoginKit'
 
+  # -Google log in
+  pod 'GoogleSignIn', '~> 5.0'
+
   # Pods for Messenger
 
   target 'MessengerTests' do
